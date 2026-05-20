@@ -3,224 +3,312 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Borneo Incline Skate — Club Sepatu Roda Pontianak</title>
-  <meta name="description" content="Borneo Incline Skate — Club sepatu roda terbaik di Pontianak, Kalimantan Barat. Latihan rutin, kompetisi, dan komunitas yang solid.">
-  <meta property="og:title" content="Borneo Incline Skate — Club Sepatu Roda Pontianak" />
-<meta property="og:description" content="Borneo Incline Skate — Club sepatu roda terbaik di Pontianak, Kalimantan Barat." />
-<meta property="og:image" content="https://images.unsplash.com/photo-1609773335024-be4301497ea9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-<meta property="og:url" content="https://borneo-incline-skate.vercel.app/" />
-<meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛸️</text></svg>">
+  <title>ROTASI Inline Skate — Club Sepatu Roda Pontianak</title>
+  <meta name="description" content="Rotasi Inline Skate — Club sepatu roda Pontianak. Berdiri sejak Mei 2023, 50+ atlet, latihan rutin 3x seminggu.">
+  <meta property="og:title" content="ROTASI — Club Sepatu Roda Pontianak" />
+  <meta property="og:description" content="ROTASI — Club sepatu roda terbaik di Pontianak, Kalimantan Barat." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1609773335024-be4301497ea9?q=80&w=1170&auto=format&fit=crop" />
+  <meta property="og:url" content="https://jakaria0208-hue.github.io/ROTASI/" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="https://i.ibb.co/zTVKJH40/LOGO-ROTASI-WHITE.webp" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --red: #e31837;
-      --red-dark: #b5121e;
-      --black: #111111;
-      --dark: #1a1a1a;
-      --dark2: #222222;
-      --gray: #888888;
-      --gray2: #555555;
-      --light: #f5f5f5;
+      --green: #4ade80;
+      --green-dark: #22c55e;
+      --green-glow: rgba(74, 222, 128, 0.12);
+      --black: #080808;
+      --dark: #0f0f0f;
+      --dark2: #161616;
+      --dark3: #1e1e1e;
+      --gray: #6b7280;
+      --gray2: #9ca3af;
       --white: #ffffff;
-      --border: #e0e0e0;
+      --border: rgba(255,255,255,0.07);
+      --border-hover: rgba(74, 222, 128, 0.3);
+      --glass-bg: rgba(255,255,255,0.04);
+      --glass-border: rgba(255,255,255,0.08);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
-    body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--black); overflow-x: hidden; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--black); color: var(--white); overflow-x: hidden; }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; height: auto; display: block; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
 
     /* SCROLL PROGRESS */
-    .scroll-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--red); z-index: 999; width: 0%; transition: width 0.1s; }
+    .scroll-bar { position: fixed; top: 0; left: 0; height: 2px; background: var(--green); z-index: 999; width: 0%; transition: width 0.1s; box-shadow: 0 0 8px var(--green); }
 
-    /* NAV */
-    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 0; transition: all 0.3s; }
-    .nav.scrolled { background: var(--black); padding: 14px 0; box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+    /* NAV — floating glass */
+    .nav {
+      position: fixed; top: 16px; left: 50%; transform: translateX(-50%);
+      width: calc(100% - 48px); max-width: 1160px;
+      z-index: 100;
+      background: rgba(8,8,8,0.55);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid var(--glass-border);
+      border-radius: 14px;
+      padding: 12px 24px;
+      transition: all 0.3s;
+    }
+    .nav.scrolled { background: rgba(8,8,8,0.85); border-color: rgba(255,255,255,0.1); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
     .nav-logo { display: flex; align-items: center; gap: 10px; }
-    .nav-logo-icon { width: 38px; height: 38px; background: var(--red); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: white; letter-spacing: 1px; }
-    .nav-logo-text { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 2px; color: white; line-height: 1.1; }
-    .nav-logo-sub { font-size: 9px; font-weight: 600; letter-spacing: 2px; color: rgba(255,255,255,0.5); text-transform: uppercase; }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
-    .nav-links a { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.75); transition: color 0.2s; }
-    .nav-links a:hover { color: var(--red); }
-    .nav-cta { font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: white; background: var(--red); padding: 10px 24px; border-radius: 4px; transition: all 0.2s; }
-    .nav-cta:hover { background: var(--red-dark); }
+    .nav-logo img { height: 34px; width: auto; object-fit: contain; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.6); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--green); }
+    .nav-cta {
+      font-size: 13px; font-weight: 600; color: var(--black);
+      background: var(--green); padding: 9px 20px; border-radius: 8px;
+      transition: all 0.2s; letter-spacing: 0.3px;
+    }
+    .nav-cta:hover { background: var(--green-dark); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(74,222,128,0.3); }
     .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-    .nav-hamburger span { width: 24px; height: 2px; background: white; }
+    .nav-hamburger span { width: 22px; height: 2px; background: white; border-radius: 2px; }
 
     /* HERO */
     .hero { min-height: 100vh; position: relative; display: flex; align-items: center; overflow: hidden; }
     .hero-bg { position: absolute; inset: 0; z-index: 0; }
     .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
-    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0.4) 100%); }
-    .hero-content { position: relative; z-index: 2; padding-top: 100px; padding-bottom: 60px; width: 100%; }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(8,8,8,0.92) 40%, rgba(8,8,8,0.55) 100%); }
+    .hero-content { position: relative; z-index: 2; padding-top: 120px; padding-bottom: 80px; width: 100%; }
     .hero-inner { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
-    .hero-tag { display: inline-flex; align-items: center; gap: 10px; background: var(--red); color: white; font-size: 11px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; padding: 7px 16px; border-radius: 3px; margin-bottom: 28px; }
-    .hero-tag::before { content: ''; width: 6px; height: 6px; background: white; border-radius: 50%; animation: blink 1.5s infinite; }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--green-glow); color: var(--green);
+      border: 1px solid rgba(74,222,128,0.25);
+      font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+      padding: 6px 14px; border-radius: 100px; margin-bottom: 28px;
+      backdrop-filter: blur(8px);
+    }
+    .hero-tag::before { content: ''; width: 6px; height: 6px; background: var(--green); border-radius: 50%; animation: blink 1.5s infinite; box-shadow: 0 0 6px var(--green); }
     @keyframes blink { 0%,100%{opacity:1}50%{opacity:0.3} }
-    .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(56px, 9vw, 120px); line-height: 0.92; color: white; margin-bottom: 24px; letter-spacing: 2px; }
-    .hero-title span { color: var(--red); }
-    .hero-desc { font-size: 16px; color: rgba(255,255,255,0.75); line-height: 1.8; max-width: 480px; margin-bottom: 40px; font-weight: 400; }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 64px; }
-    .btn-red { background: var(--red); color: white; padding: 14px 32px; font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; }
-    .btn-red:hover { background: var(--red-dark); transform: translateY(-2px); }
-    .btn-outline-white { color: white; padding: 14px 28px; font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; border: 2px solid rgba(255,255,255,0.4); border-radius: 4px; transition: all 0.2s; }
-    .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.08); }
+    .hero-title { font-size: clamp(52px, 8.5vw, 110px); font-weight: 800; line-height: 0.95; color: white; margin-bottom: 24px; letter-spacing: -2px; }
+    .hero-title span { color: var(--green); }
+    .hero-desc { font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.8; max-width: 460px; margin-bottom: 40px; font-weight: 400; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 72px; }
+    .btn-green {
+      background: var(--green); color: var(--black);
+      padding: 13px 28px; font-size: 13px; font-weight: 700;
+      border-radius: 10px; transition: all 0.2s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-green:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(74,222,128,0.3); }
+    .btn-glass {
+      color: white; padding: 13px 24px; font-size: 13px; font-weight: 600;
+      background: var(--glass-bg); border: 1px solid var(--glass-border);
+      border-radius: 10px; transition: all 0.2s;
+      backdrop-filter: blur(8px);
+    }
+    .btn-glass:hover { border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); }
     .hero-stats { display: flex; gap: 48px; }
-    .hero-stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 40px; color: white; letter-spacing: 2px; line-height: 1; display: block; }
-    .hero-stat-num span { color: var(--red); }
-    .hero-stat-label { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
-    .hero-num-bg { position: absolute; right: -20px; bottom: -40px; font-family: 'Bebas Neue', sans-serif; font-size: 380px; color: rgba(255,255,255,0.03); line-height: 1; z-index: 1; pointer-events: none; letter-spacing: -10px; }
+    .hero-stat-num { font-size: 40px; font-weight: 800; color: white; letter-spacing: -1px; line-height: 1; display: block; }
+    .hero-stat-num span { color: var(--green); }
+    .hero-stat-label { font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 4px; display: block; }
 
     /* MARQUEE */
-    .marquee-band { background: var(--red); padding: 14px 0; overflow: hidden; }
-    .marquee-track { display: flex; gap: 0; animation: marquee 20s linear infinite; white-space: nowrap; }
+    .marquee-band { background: var(--dark2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 14px 0; overflow: hidden; }
+    .marquee-track { display: flex; animation: marquee 22s linear infinite; white-space: nowrap; }
     @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-    .m-item { display: inline-flex; align-items: center; gap: 24px; font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 3px; color: white; padding: 0 32px; flex-shrink: 0; }
-    .m-dot { width: 6px; height: 6px; background: rgba(255,255,255,0.5); border-radius: 50%; }
+    .m-item { display: inline-flex; align-items: center; gap: 20px; font-size: 12px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); padding: 0 28px; flex-shrink: 0; }
+    .m-dot { width: 4px; height: 4px; background: var(--green); border-radius: 50%; }
 
     /* SECTION BASE */
-    .section { padding: 100px 0; position: relative; overflow: hidden; }
-    .section-dark { background: var(--black); color: white; }
-    .section-light { background: var(--light); }
-    .section-num { position: absolute; font-family: 'Bebas Neue', sans-serif; font-size: 260px; color: rgba(0,0,0,0.05); line-height: 1; pointer-events: none; letter-spacing: -5px; z-index: 0; }
-    .section-dark .section-num { color: rgba(255,255,255,0.04); }
-    .section-num.top-left { top: -40px; left: -20px; }
-    .section-num.top-right { top: -40px; right: -20px; }
-    .section-num.bottom-right { bottom: -40px; right: -20px; }
-    .section-label { font-size: 11px; font-weight: 800; letter-spacing: 4px; text-transform: uppercase; color: var(--red); display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
-    .section-label::before { content: '—'; }
-    .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px, 5vw, 60px); line-height: 1; letter-spacing: 2px; margin-bottom: 16px; }
-    .section-sub { font-size: 15px; color: var(--gray2); line-height: 1.8; max-width: 560px; }
-    .section-dark .section-sub { color: rgba(255,255,255,0.55); }
+    .section { padding: 110px 0; position: relative; overflow: hidden; }
+    .section-alt { background: var(--dark2); }
+    .section-num { position: absolute; font-size: 240px; font-weight: 800; color: rgba(255,255,255,0.025); line-height: 1; pointer-events: none; letter-spacing: -8px; z-index: 0; }
+    .section-num.top-left { top: -40px; left: -10px; }
+    .section-num.top-right { top: -40px; right: -10px; }
+    .section-num.bottom-right { bottom: -40px; right: -10px; }
+    .section-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--green); display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .section-label::before { content: ''; width: 20px; height: 2px; background: var(--green); border-radius: 2px; }
+    .section-title { font-size: clamp(32px, 4.5vw, 54px); font-weight: 800; line-height: 1.05; letter-spacing: -1.5px; margin-bottom: 16px; }
+    .section-sub { font-size: 15px; color: var(--gray2); line-height: 1.8; max-width: 540px; font-weight: 400; }
 
     /* ABOUT */
     .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; position: relative; z-index: 1; }
-    .about-photo { position: relative; border-radius: 8px; overflow: hidden; }
-    .about-photo img { width: 100%; height: 500px; object-fit: cover; filter: grayscale(20%); }
+    .about-photo { position: relative; border-radius: 16px; overflow: hidden; }
+    .about-photo img { width: 100%; height: 520px; object-fit: cover; filter: grayscale(15%); }
+    .about-photo::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,8,8,0.5) 0%, transparent 60%); z-index: 1; }
     .about-photo-badge {
-      position: absolute; bottom: 24px; left: 24px;
-      background: var(--red); color: white;
-      padding: 14px 20px; border-radius: 6px;
-      font-family: 'Bebas Neue', sans-serif; font-size: 14px; letter-spacing: 2px;
+      position: absolute; bottom: 24px; left: 24px; z-index: 2;
+      background: rgba(8,8,8,0.7); backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      color: white; padding: 14px 18px; border-radius: 12px;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.5px;
     }
-    .about-badge-num { font-size: 36px; line-height: 1; display: block; }
+    .about-badge-num { font-size: 34px; font-weight: 800; line-height: 1; display: block; color: var(--green); letter-spacing: -1px; }
     .about-content { position: relative; z-index: 1; }
-    .about-desc { font-size: 15px; color: var(--gray2); line-height: 1.9; margin-bottom: 20px; }
-    .about-desc strong { color: var(--black); font-weight: 700; }
-    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 36px; }
-    .about-stat-card { padding: 20px; border: 2px solid var(--border); border-radius: 6px; transition: border-color 0.2s; }
-    .about-stat-card:hover { border-color: var(--red); }
-    .about-stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 42px; color: var(--red); letter-spacing: 1px; line-height: 1; }
-    .about-stat-label { font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--gray); margin-top: 4px; }
+    .about-desc { font-size: 15px; color: var(--gray2); line-height: 1.9; margin-bottom: 20px; font-weight: 400; }
+    .about-desc strong { color: var(--white); font-weight: 700; }
+    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 36px; }
+    .about-stat-card {
+      padding: 20px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      backdrop-filter: blur(8px);
+      transition: border-color 0.25s, background 0.25s;
+    }
+    .about-stat-card:hover { border-color: var(--border-hover); background: var(--green-glow); }
+    .about-stat-num { font-size: 38px; font-weight: 800; color: var(--green); letter-spacing: -1px; line-height: 1; }
+    .about-stat-label { font-size: 12px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; color: var(--gray); margin-top: 6px; }
+
+    /* PELATIH */
+    .coach-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; position: relative; z-index: 1; }
+    .coach-card {
+      display: flex; gap: 24px; align-items: flex-start;
+      background: var(--glass-bg); border: 1px solid var(--glass-border);
+      border-radius: 16px; padding: 28px;
+      backdrop-filter: blur(8px);
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .coach-card:hover { border-color: var(--border-hover); background: var(--green-glow); }
+    .coach-photo { width: 100px; height: 100px; border-radius: 12px; overflow: hidden; flex-shrink: 0; }
+    .coach-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(20%); }
+    .coach-name { font-size: 18px; font-weight: 800; color: var(--white); letter-spacing: -0.3px; margin-bottom: 4px; }
+    .coach-title { font-size: 12px; font-weight: 500; color: var(--green); letter-spacing: 0.5px; margin-bottom: 16px; }
+    .coach-achievements { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .coach-achievements li { font-size: 13px; color: var(--gray2); line-height: 1.5; display: flex; align-items: flex-start; gap: 8px; }
+    .coach-achievements li::before { content: '—'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+    @media (max-width: 768px) { .coach-grid { grid-template-columns: 1fr; } .coach-card { flex-direction: column; } }
 
     /* PROGRAM */
-    .program-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 60px; position: relative; z-index: 1; }
+    .program-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; margin-top: 60px; position: relative; z-index: 1; border-radius: 16px; overflow: hidden; }
     .program-card { position: relative; overflow: hidden; cursor: pointer; }
-    .program-card img { width: 100%; height: 380px; object-fit: cover; transition: transform 0.5s, filter 0.5s; filter: grayscale(40%); }
-    .program-card:hover img { transform: scale(1.06); filter: grayscale(0%); }
-    .program-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 60%, transparent 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 28px; }
-    .program-level { font-size: 10px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
-    .program-name { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: white; letter-spacing: 2px; margin-bottom: 10px; }
-    .program-desc { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 16px; }
-    .program-tag { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: white; border: 1px solid rgba(255,255,255,0.3); padding: 6px 14px; border-radius: 3px; transition: all 0.2s; }
-    .program-card:hover .program-tag { background: var(--red); border-color: var(--red); }
+    .program-card img { width: 100%; height: 380px; object-fit: cover; transition: transform 0.5s, filter 0.5s; filter: grayscale(50%) brightness(0.8); }
+    .program-card:hover img { transform: scale(1.06); filter: grayscale(0%) brightness(1); }
+    .program-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,8,8,0.95) 0%, rgba(8,8,8,0.2) 60%, transparent 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 28px; }
+    .program-level { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--green); margin-bottom: 8px; }
+    .program-name { font-size: 24px; font-weight: 800; color: white; letter-spacing: -0.5px; margin-bottom: 10px; }
+    .program-desc { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 16px; }
+    .program-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;
+      color: white; background: var(--glass-bg); border: 1px solid var(--glass-border);
+      padding: 6px 14px; border-radius: 6px; transition: all 0.2s;
+      backdrop-filter: blur(8px);
+    }
+    .program-card:hover .program-tag { background: var(--green); border-color: var(--green); color: var(--black); }
 
     /* JADWAL */
     .jadwal-inner { position: relative; z-index: 1; }
-    .jadwal-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 20px; }
+    .jadwal-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 20px; }
     .jadwal-table { width: 100%; border-collapse: collapse; }
-    .jadwal-table thead th { text-align: left; font-size: 10px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: var(--red); padding: 14px 20px; border-bottom: 2px solid var(--red); }
+    .jadwal-table thead th { text-align: left; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gray); padding: 14px 20px; border-bottom: 1px solid var(--border); }
     .jadwal-table tbody tr { border-bottom: 1px solid var(--border); transition: background 0.2s; }
-    .jadwal-table tbody tr:hover { background: var(--light); }
+    .jadwal-table tbody tr:hover { background: var(--glass-bg); }
     .jadwal-table td { padding: 18px 20px; font-size: 14px; }
-    .jadwal-day { font-weight: 700; font-size: 14px; }
-    .jadwal-session { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 3px; }
-    .jadwal-session.pemula { background: #fff0f0; color: var(--red); }
-    .jadwal-session.menengah { background: #fff8e1; color: #e65c00; }
-    .jadwal-session.advance { background: #f0f0f0; color: var(--black); }
-    .jadwal-time { font-size: 14px; font-weight: 600; color: var(--gray2); }
+    .jadwal-day { font-weight: 700; font-size: 14px; color: var(--white); }
+    .jadwal-session { font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 6px; }
+    .jadwal-session.pemula { background: rgba(74,222,128,0.12); color: var(--green); border: 1px solid rgba(74,222,128,0.2); }
+    .jadwal-session.menengah { background: rgba(250,204,21,0.1); color: #fbbf24; border: 1px solid rgba(250,204,21,0.2); }
+    .jadwal-session.advance { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.8); border: 1px solid var(--border); }
+    .jadwal-time { font-size: 14px; font-weight: 500; color: var(--gray2); }
     .jadwal-loc { font-size: 13px; color: var(--gray); }
 
     /* GALERI */
-    .galeri-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; margin-top: 60px; position: relative; z-index: 1; }
-    .galeri-item { position: relative; overflow: hidden; aspect-ratio: 1; background: var(--dark2); cursor: pointer; }
+    .galeri-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; margin-top: 60px; position: relative; z-index: 1; border-radius: 16px; overflow: hidden; }
+    .galeri-item { position: relative; overflow: hidden; aspect-ratio: 1; background: var(--dark3); cursor: pointer; }
     .galeri-item.wide { grid-column: span 2; aspect-ratio: 2/1; }
-    .galeri-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s, filter 0.3s; filter: grayscale(30%); }
+    .galeri-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s, filter 0.3s; filter: grayscale(20%); }
     .galeri-item:hover img { transform: scale(1.08); filter: grayscale(0%); }
-    .galeri-overlay { position: absolute; inset: 0; background: rgba(227,24,55,0.0); transition: background 0.3s; display: flex; align-items: center; justify-content: center; }
-    .galeri-item:hover .galeri-overlay { background: rgba(227,24,55,0.25); }
-    .galeri-icon { font-size: 28px; color: white; opacity: 0; transform: scale(0.7); transition: all 0.3s; }
+    .galeri-overlay { position: absolute; inset: 0; background: rgba(74,222,128,0); transition: background 0.3s; display: flex; align-items: center; justify-content: center; }
+    .galeri-item:hover .galeri-overlay { background: rgba(74,222,128,0.2); }
+    .galeri-icon { font-size: 26px; color: white; opacity: 0; transform: scale(0.7); transition: all 0.3s; }
     .galeri-item:hover .galeri-icon { opacity: 1; transform: scale(1); }
 
     /* PRESTASI */
     .prestasi-inner { position: relative; z-index: 1; }
-    .prestasi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 60px; }
-    .prestasi-card { padding: 28px 24px; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; background: rgba(255,255,255,0.03); transition: border-color 0.3s, background 0.3s; }
-    .prestasi-card:hover { border-color: var(--red); background: rgba(227,24,55,0.06); }
-    .prestasi-icon { font-size: 32px; margin-bottom: 14px; }
-    .prestasi-year { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--red); margin-bottom: 8px; }
-    .prestasi-title { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: white; letter-spacing: 1px; margin-bottom: 6px; }
-    .prestasi-event { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.5; }
+    .prestasi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 60px; }
+    .prestasi-card {
+      padding: 24px 20px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 14px;
+      backdrop-filter: blur(8px);
+      transition: border-color 0.3s, background 0.3s, transform 0.3s;
+    }
+    .prestasi-card:hover { border-color: var(--border-hover); background: var(--green-glow); transform: translateY(-3px); }
+    .prestasi-icon { width: 36px; height: 36px; color: var(--green); margin-bottom: 14px; opacity: 0.9; }
+    .prestasi-year { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--green); margin-bottom: 8px; }
+    .prestasi-title { font-size: 16px; font-weight: 800; color: white; letter-spacing: -0.3px; margin-bottom: 6px; }
+    .prestasi-event { font-size: 12px; color: var(--gray); line-height: 1.6; font-weight: 400; }
 
     /* TESTIMONI */
     .testi-inner { position: relative; z-index: 1; }
-    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px; }
-    .testi-card { padding: 32px; border: 2px solid var(--border); border-radius: 6px; transition: border-color 0.3s, transform 0.3s; }
-    .testi-card:hover { border-color: var(--red); transform: translateY(-4px); }
-    .testi-stars { color: var(--red); font-size: 14px; letter-spacing: 2px; margin-bottom: 16px; }
-    .testi-text { font-size: 14px; color: var(--gray2); line-height: 1.8; margin-bottom: 24px; font-style: italic; }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 60px; }
+    .testi-card {
+      padding: 28px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      backdrop-filter: blur(8px);
+      transition: border-color 0.3s, transform 0.3s, background 0.3s;
+    }
+    .testi-card:hover { border-color: var(--border-hover); transform: translateY(-4px); background: var(--green-glow); }
+    .testi-stars { color: var(--green); font-size: 13px; letter-spacing: 2px; margin-bottom: 16px; }
+    .testi-text { font-size: 14px; color: var(--gray2); line-height: 1.8; margin-bottom: 24px; font-style: italic; font-weight: 400; }
     .testi-author { display: flex; align-items: center; gap: 12px; }
-    .testi-ava { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; background: var(--light); flex-shrink: 0; }
+    .testi-ava { width: 42px; height: 42px; border-radius: 50%; overflow: hidden; background: var(--dark3); flex-shrink: 0; }
     .testi-ava img { width: 100%; height: 100%; object-fit: cover; }
-    .testi-name { font-size: 14px; font-weight: 800; }
-    .testi-role { font-size: 12px; color: var(--gray); }
+    .testi-name { font-size: 14px; font-weight: 700; color: var(--white); }
+    .testi-role { font-size: 12px; color: var(--gray); margin-top: 2px; }
 
     /* KONTAK */
     .kontak-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; position: relative; z-index: 1; }
-    .kontak-info { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
-    .kontak-item { display: flex; align-items: flex-start; gap: 16px; padding: 20px; border: 2px solid rgba(255,255,255,0.08); border-radius: 6px; transition: border-color 0.2s; }
-    .kontak-item:hover { border-color: var(--red); }
-    .kontak-icon { width: 44px; height: 44px; background: var(--red); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
-    .kontak-label { font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 4px; }
-    .kontak-val { font-size: 14px; font-weight: 600; color: white; }
-    .kontak-val a { color: rgba(255,255,255,0.75); transition: color 0.2s; }
-    .kontak-val a:hover { color: white; }
-    .kontak-form { display: flex; flex-direction: column; gap: 16px; }
-    .form-group { display: flex; flex-direction: column; gap: 8px; }
-    .form-group label { font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.45); }
-    .form-group input, .form-group textarea, .form-group select {
-      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 4px; padding: 13px 16px;
-      font-size: 14px; font-family: 'Inter', sans-serif; color: white; outline: none;
-      transition: border-color 0.2s;
+    .kontak-info { display: flex; flex-direction: column; gap: 12px; margin-top: 32px; }
+    .kontak-item {
+      display: flex; align-items: flex-start; gap: 14px; padding: 18px;
+      background: var(--glass-bg); border: 1px solid var(--glass-border);
+      border-radius: 12px; transition: border-color 0.2s, background 0.2s;
+      backdrop-filter: blur(8px);
     }
-    .form-group input:focus, .form-group textarea:focus { border-color: var(--red); }
-    .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+    .kontak-item:hover { border-color: var(--border-hover); background: var(--green-glow); }
+    .kontak-icon { width: 40px; height: 40px; background: var(--green-glow); border: 1px solid rgba(74,222,128,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
+    .kontak-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray); margin-bottom: 4px; }
+    .kontak-val { font-size: 14px; font-weight: 600; color: white; }
+    .kontak-val a { color: var(--gray2); transition: color 0.2s; }
+    .kontak-val a:hover { color: var(--green); }
+    .kontak-form { display: flex; flex-direction: column; gap: 14px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-group label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray); }
+    .form-group input, .form-group textarea, .form-group select {
+      background: var(--glass-bg); border: 1px solid var(--glass-border);
+      border-radius: 10px; padding: 13px 16px;
+      font-size: 14px; font-family: 'Plus Jakarta Sans', sans-serif; color: white; outline: none;
+      transition: border-color 0.2s, background 0.2s;
+      backdrop-filter: blur(8px);
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: rgba(74,222,128,0.4); background: var(--green-glow); }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.2); }
+    .form-group select option { background: var(--dark2); color: white; }
     .form-group textarea { resize: vertical; min-height: 120px; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 
     /* FOOTER */
-    .footer { background: var(--dark); border-top: 1px solid rgba(255,255,255,0.06); padding: 64px 0 32px; }
+    .footer { background: var(--dark); border-top: 1px solid var(--border); padding: 64px 0 32px; }
     .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 48px; }
-    .footer-brand { }
     .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
-    .footer-logo-icon { width: 40px; height: 40px; background: var(--red); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: white; }
-    .footer-logo-text { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 2px; color: white; }
-    .footer-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.8; max-width: 280px; margin-bottom: 24px; }
-    .footer-socials { display: flex; gap: 10px; }
-    .footer-social { width: 38px; height: 38px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 15px; color: rgba(255,255,255,0.5); transition: all 0.2s; }
-    .footer-social:hover { border-color: var(--red); color: var(--red); }
-    .footer-col h4 { font-size: 10px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 20px; }
+    .footer-logo img { height: 32px; width: auto; }
+    .footer-desc { font-size: 13px; color: var(--gray); line-height: 1.8; max-width: 260px; margin-bottom: 24px; font-weight: 400; }
+    .footer-socials { display: flex; gap: 8px; }
+    .footer-social {
+      width: 36px; height: 36px;
+      background: var(--glass-bg); border: 1px solid var(--glass-border);
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      font-size: 14px; color: var(--gray); transition: all 0.2s;
+    }
+    .footer-social:hover { border-color: var(--border-hover); color: var(--green); background: var(--green-glow); }
+    .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gray); margin-bottom: 20px; }
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-    .footer-col ul a { font-size: 14px; color: rgba(255,255,255,0.55); transition: color 0.2s; }
-    .footer-col ul a:hover { color: var(--red); }
-    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 12px; color: rgba(255,255,255,0.3); flex-wrap: wrap; gap: 10px; }
-    .footer-bottom span b { color: var(--red); }
+    .footer-col ul a { font-size: 14px; color: rgba(255,255,255,0.45); transition: color 0.2s; font-weight: 400; }
+    .footer-col ul a:hover { color: var(--green); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid var(--border); font-size: 12px; color: var(--gray); flex-wrap: wrap; gap: 10px; font-weight: 400; }
+    .footer-bottom span b { color: var(--green); font-weight: 700; }
 
     /* RESPONSIVE */
     @media (max-width: 1024px) {
@@ -234,8 +322,9 @@
       .nav-cta { display: none; }
     }
     @media (max-width: 640px) {
+      .nav { top: 10px; width: calc(100% - 24px); padding: 10px 16px; }
       .section { padding: 72px 0; }
-      .hero-stats { gap: 28px; }
+      .hero-stats { gap: 24px; }
       .program-grid, .galeri-grid { grid-template-columns: 1fr; }
       .galeri-item.wide { grid-column: span 1; aspect-ratio: 1; }
       .prestasi-grid { grid-template-columns: 1fr 1fr; }
@@ -243,7 +332,7 @@
       .footer-inner { grid-template-columns: 1fr; gap: 36px; }
       .footer-bottom { flex-direction: column; text-align: center; }
       .form-row { grid-template-columns: 1fr; }
-      .section-num { font-size: 160px; }
+      .section-num { font-size: 140px; }
     }
   </style>
 </head>
@@ -255,14 +344,11 @@
 <nav class="nav" id="navbar">
   <div class="nav-inner">
     <div class="nav-logo">
-      <div class="nav-logo-icon">BIS</div>
-      <div>
-        <div class="nav-logo-text">Borneo Incline Skate</div>
-        <div class="nav-logo-sub">Pontianak, Kalimantan Barat</div>
-      </div>
+      <img src="https://i.ibb.co/zTVKJH40/LOGO-ROTASI-WHITE.webp" alt="ROTASI">
     </div>
     <ul class="nav-links">
       <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#pelatih">Pelatih</a></li>
       <li><a href="#program">Program</a></li>
       <li><a href="#jadwal">Jadwal</a></li>
       <li><a href="#galeri">Galeri</a></li>
@@ -277,36 +363,35 @@
 <!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1609773335024-be4301497ea9?w=1600&auto=format&fit=crop&q=85" alt="Borneo Incline Skate">
+    <img src="https://images.unsplash.com/photo-1609773335024-be4301497ea9?w=1600&auto=format&fit=crop&q=85" alt="ROTASI Club">
   </div>
-  <div class="hero-num-bg">BIS</div>
   <div class="hero-content">
     <div class="hero-inner">
       <div class="hero-tag">Club Sepatu Roda Pontianak</div>
       <h1 class="hero-title">
-        BORNEO<br>
-        INCLINE<br>
+        ROTASI<br>
+        INLINE<br>
         <span>SKATE</span>
       </h1>
       <p class="hero-desc">
-        Komunitas sepatu roda terdepan di Kalimantan Barat. Bergabunglah bersama ratusan skater dari berbagai level — dari pemula hingga atlet kompetisi.
+        Komunitas inline skate Pontianak yang solid. Berdiri sejak Mei 2023, berlatih rutin 3x seminggu dengan program On-skate & Off-skate untuk semua level.
       </p>
       <div class="hero-actions">
-        <a href="#program" class="btn-red">Lihat Program ↓</a>
-        <a href="#kontak" class="btn-outline-white">Daftar Sekarang</a>
+        <a href="#program" class="btn-green">Lihat Program ↓</a>
+        <a href="#kontak" class="btn-glass">Daftar Sekarang</a>
       </div>
       <div class="hero-stats">
         <div>
-          <span class="hero-stat-num">8<span>+</span></span>
+          <span class="hero-stat-num">2023</span>
           <span class="hero-stat-label">Tahun Berdiri</span>
         </div>
         <div>
-          <span class="hero-stat-num">200<span>+</span></span>
-          <span class="hero-stat-label">Member Aktif</span>
+          <span class="hero-stat-num">50<span>+</span></span>
+          <span class="hero-stat-label">Atlet Aktif</span>
         </div>
         <div>
-          <span class="hero-stat-num">45<span>+</span></span>
-          <span class="hero-stat-label">Medali & Trofi</span>
+          <span class="hero-stat-num">3<span>x</span></span>
+          <span class="hero-stat-label">Latihan/Minggu</span>
         </div>
       </div>
     </div>
@@ -337,37 +422,37 @@
   <div class="container">
     <div class="about-inner">
       <div class="about-photo">
-        <img src="https://images.unsplash.com/photo-1707126255749-08bba0416345?w=800&auto=format&fit=crop&q=80" alt="Borneo Incline Skate">
+        <img src="https://images.unsplash.com/photo-1707126255749-08bba0416345?w=800&auto=format&fit=crop&q=80" alt="ROTASI Club">
         <div class="about-photo-badge">
-          <span class="about-badge-num">2016</span>
-          Tahun Berdiri
+          <span class="about-badge-num">2023</span>
+          Berdiri Sejak Mei
         </div>
       </div>
       <div class="about-content">
         <div class="section-label">Tentang Kami</div>
-        <h2 class="section-title">KOMUNITAS SKATER<br>TERBAIK BORNEO</h2>
+        <h2 class="section-title">ROTASI<br>INLINE SKATE</h2>
         <p class="about-desc">
-          <strong>Borneo Incline Skate</strong> lahir dari kecintaan sekelompok skater muda Pontianak terhadap olahraga sepatu roda. Sejak 2016, kami telah berkembang menjadi komunitas yang tidak hanya berlatih, tapi juga berprestasi di tingkat regional dan nasional.
+          <strong>Rotasi Inline Skate</strong> berdiri sejak Mei 2023 di Pontianak, Kalimantan Barat. Kami hadir sebagai komunitas inline skate yang solid, terstruktur, dan berprestasi — mulai dari level pemula hingga speed.
         </p>
         <p class="about-desc">
-          Kami menyediakan lingkungan latihan yang <strong>aman, terstruktur, dan menyenangkan</strong> untuk semua usia — dari anak-anak 5 tahun hingga dewasa. Dengan pelatih berpengalaman dan fasilitas yang memadai, setiap member kami berkembang sesuai potensi terbaiknya.
+          Latihan rutin <strong>3x dalam seminggu</strong> dengan variasi program <strong>On-skate & Off-skate</strong>, dibimbing langsung oleh pelatih berpengalaman di bidang sepatu roda nasional.
         </p>
         <div class="about-stats">
           <div class="about-stat-card">
-            <div class="about-stat-num">200+</div>
-            <div class="about-stat-label">Member Aktif</div>
+            <div class="about-stat-num">50+</div>
+            <div class="about-stat-label">Atlet Aktif</div>
           </div>
           <div class="about-stat-card">
-            <div class="about-stat-num">45+</div>
-            <div class="about-stat-label">Medali Kompetisi</div>
+            <div class="about-stat-num">3x</div>
+            <div class="about-stat-label">Latihan/Minggu</div>
           </div>
           <div class="about-stat-card">
-            <div class="about-stat-num">5</div>
-            <div class="about-stat-label">Pelatih Bersertifikat</div>
+            <div class="about-stat-num">3</div>
+            <div class="about-stat-label">Level Program</div>
           </div>
           <div class="about-stat-card">
-            <div class="about-stat-num">12+</div>
-            <div class="about-stat-label">Kompetisi Diikuti</div>
+            <div class="about-stat-num">2</div>
+            <div class="about-stat-label">Pelatih Berpengalaman</div>
           </div>
         </div>
       </div>
@@ -375,8 +460,51 @@
   </div>
 </section>
 
+<!-- PELATIH -->
+<section class="section section-alt" id="pelatih">
+  <div class="section-num top-right">★</div>
+  <div class="container">
+    <div style="position:relative;z-index:1;margin-bottom:48px;">
+      <div class="section-label">Tim Pelatih</div>
+      <h2 class="section-title">DIBIMBING OLEH<br>YANG TERBAIK</h2>
+    </div>
+    <div class="coach-grid">
+      <div class="coach-card">
+        <div class="coach-photo">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=80" alt="Coach Indra">
+        </div>
+        <div class="coach-info">
+          <div class="coach-name">Coach Indra</div>
+          <div class="coach-title">Head Coach — Rotasi Inline Skate</div>
+          <ul class="coach-achievements">
+            <li>Pengalaman melatih sejak 2014</li>
+            <li>Head Coach Tim Popnas Kalbar 2017</li>
+            <li>Head Coach Tim Porprov Kota Pontianak 2018</li>
+            <li>Head Coach Tim Prapon Kalbar 2019</li>
+            <li>Head Coach Tim Prapon Kalbar 2024</li>
+          </ul>
+        </div>
+      </div>
+      <div class="coach-card">
+        <div class="coach-photo">
+          <img src="https://images.unsplash.com/photo-1546483875-ad9014c88eba?w=600&auto=format&fit=crop&q=80" alt="Coach Aul">
+        </div>
+        <div class="coach-info">
+          <div class="coach-name">Coach Aul</div>
+          <div class="coach-title">Assistant Coach — Rotasi Inline Skate</div>
+          <ul class="coach-achievements">
+            <li>Medali Perak Piala Menpora 2018</li>
+            <li>1 Medali Emas Porprov Kalbar 2018</li>
+            <li>4 Medali Emas Porprov Kalbar 2022</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PROGRAM -->
-<section class="section section-light" id="program">
+<section class="section section-alt" id="program">
   <div class="section-num top-right">02</div>
   <div class="container">
     <div style="position:relative;z-index:1;">
@@ -425,53 +553,53 @@
           <div class="section-label">Jadwal Latihan</div>
           <h2 class="section-title">RUTIN TIAP<br>MINGGU</h2>
         </div>
-        <a href="#kontak" class="btn-red">Daftar Sekarang</a>
+        <a href="#kontak" class="btn-green">Daftar Sekarang</a>
       </div>
-      <div style="overflow-x: auto;">
-<table class="jadwal-table">
-        <thead>
-          <tr>
-            <th>Hari</th>
-            <th>Sesi / Level</th>
-            <th>Jam</th>
-            <th>Lokasi</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><div class="jadwal-day">Senin</div></td>
-            <td><span class="jadwal-session pemula">Pemula</span></td>
-            <td class="jadwal-time">15.30 – 17.30</td>
-            <td class="jadwal-loc">Lapangan GOR Pangsuma, Pontianak</td>
-          </tr>
-          <tr>
-            <td><div class="jadwal-day">Rabu</div></td>
-            <td><span class="jadwal-session menengah">Menengah</span></td>
-            <td class="jadwal-time">15.30 – 18.00</td>
-            <td class="jadwal-loc">Lapangan GOR Pangsuma, Pontianak</td>
-          </tr>
-          <tr>
-            <td><div class="jadwal-day">Jumat</div></td>
-            <td><span class="jadwal-session advance">Advance</span></td>
-            <td class="jadwal-time">15.00 – 18.00</td>
-            <td class="jadwal-loc">Lapangan GOR Pangsuma, Pontianak</td>
-          </tr>
-          <tr>
-            <td><div class="jadwal-day">Sabtu</div></td>
-            <td><span class="jadwal-session pemula">Pemula</span> &nbsp; <span class="jadwal-session menengah">Menengah</span></td>
-            <td class="jadwal-time">07.00 – 10.00</td>
-            <td class="jadwal-loc">Lapangan GOR Pangsuma, Pontianak</td>
-          </tr>
-          <tr>
-            <td><div class="jadwal-day">Minggu</div></td>
-            <td><span class="jadwal-session advance">Advance</span></td>
-            <td class="jadwal-time">06.30 – 09.30</td>
-            <td class="jadwal-loc">Jl. Ahmad Yani – Taman Alun-alun Kapuas</td>
-          </tr>
-        </tbody>
-      </table>
+      <div style="overflow-x:auto;">
+        <table class="jadwal-table">
+          <thead>
+            <tr>
+              <th>Hari</th>
+              <th>Sesi / Level</th>
+              <th>Jam</th>
+              <th>Lokasi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="jadwal-day">Senin</div></td>
+              <td><span class="jadwal-session pemula">Pemula</span></td>
+              <td class="jadwal-time">15.30 – 17.30</td>
+              <td class="jadwal-loc">Lapangan GOR Pangsuma, Pontianak</td>
+            </tr>
+            <tr>
+              <td><div class="jadwal-day">Rabu</div></td>
+              <td><span class="jadwal-session menengah">Menengah</span></td>
+              <td class="jadwal-time">15.30 – 18.00</td>
+              <td class="jadwal-loc">Lapangan GOR Pangsuma, Pontianak</td>
+            </tr>
+            <tr>
+              <td><div class="jadwal-day">Jumat</div></td>
+              <td><span class="jadwal-session advance">Advance</span></td>
+              <td class="jadwal-time">15.00 – 18.00</td>
+              <td class="jadwal-loc">Lapangan GOR Pangsuma, Pontianak</td>
+            </tr>
+            <tr>
+              <td><div class="jadwal-day">Sabtu</div></td>
+              <td><span class="jadwal-session pemula">Pemula</span> &nbsp; <span class="jadwal-session menengah">Menengah</span></td>
+              <td class="jadwal-time">07.00 – 10.00</td>
+              <td class="jadwal-loc">Lapangan GOR Pangsuma, Pontianak</td>
+            </tr>
+            <tr>
+              <td><div class="jadwal-day">Minggu</div></td>
+              <td><span class="jadwal-session advance">Advance</span></td>
+              <td class="jadwal-time">06.30 – 09.30</td>
+              <td class="jadwal-loc">Jl. Ahmad Yani – Taman Alun-alun Kapuas</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <p style="margin-top:20px;font-size:13px;color:var(--gray);position:relative;z-index:1;">
+      <p style="margin-top:20px;font-size:13px;color:var(--gray);position:relative;z-index:1;font-weight:400;">
         * Jadwal dapat berubah saat persiapan kompetisi. Pantau info terbaru melalui Instagram atau WhatsApp group.
       </p>
     </div>
@@ -479,12 +607,12 @@
 </section>
 
 <!-- GALERI -->
-<section class="section section-dark" id="galeri">
+<section class="section section-alt" id="galeri">
   <div class="section-num top-left">04</div>
   <div class="container">
     <div style="position:relative;z-index:1;">
       <div class="section-label">Galeri</div>
-      <h2 class="section-title" style="color:white;">MOMEN TERBAIK<br>BERSAMA BIS</h2>
+      <h2 class="section-title">MOMEN TERBAIK<br>BERSAMA ROTASI</h2>
     </div>
     <div class="galeri-grid">
       <div class="galeri-item wide">
@@ -509,67 +637,65 @@
       </div>
     </div>
     <div style="text-align:center;margin-top:36px;position:relative;z-index:1;">
-      <a href="https://instagram.com/borneoinlineskate" class="btn-outline-white">Lihat Lebih Banyak di Instagram →</a>
+      <a href="https://instagram.com/rotasi.skate" class="btn-glass">Lihat Lebih Banyak di Instagram →</a>
     </div>
   </div>
 </section>
 
 <!-- PRESTASI -->
-<section class="section section-dark" id="prestasi">
+<section class="section" id="prestasi">
   <div class="section-num top-right">05</div>
   <div class="container">
     <div class="prestasi-inner">
-      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;">
-        <div>
-          <div class="section-label">Prestasi</div>
-          <h2 class="section-title" style="color:white;">BANGGA BERSAMA<br>BIS DI KOMPETISI</h2>
-        </div>
+      <div>
+        <div class="section-label">Prestasi</div>
+        <h2 class="section-title">BANGGA BERSAMA<br>ROTASI DI KOMPETISI</h2>
       </div>
       <div class="prestasi-grid">
         <div class="prestasi-card">
-          <div class="prestasi-icon">🥇</div>
+          <div class="prestasi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="7"/><path d="M9 3h6l1 4H8L9 3z"/><path d="M12 10v8"/><path d="M9.5 12.5l2.5-2.5 2.5 2.5"/></svg></div>
           <div class="prestasi-year">2024</div>
           <div class="prestasi-title">JUARA 1 SPEED</div>
           <div class="prestasi-event">Kejurda Sepatu Roda Kalimantan Barat — Kategori U-15 Putra</div>
         </div>
         <div class="prestasi-card">
-          <div class="prestasi-icon">🥈</div>
+          <div class="prestasi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="7"/><path d="M9 3h6l1 4H8L9 3z"/><path d="M12 11v6"/></svg></div>
           <div class="prestasi-year">2024</div>
           <div class="prestasi-title">JUARA 2 FREESTYLE</div>
           <div class="prestasi-event">Open Championship Sepatu Roda Nasional — Jakarta</div>
         </div>
         <div class="prestasi-card">
-          <div class="prestasi-icon">🥇</div>
+          <div class="prestasi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="7"/><path d="M9 3h6l1 4H8L9 3z"/><path d="M12 10v8"/><path d="M9.5 12.5l2.5-2.5 2.5 2.5"/></svg></div>
           <div class="prestasi-year">2023</div>
           <div class="prestasi-title">JUARA 1 ARTISTIC</div>
           <div class="prestasi-event">Kejurda Sepatu Roda Kalimantan — Kategori U-12 Putri</div>
         </div>
         <div class="prestasi-card">
-          <div class="prestasi-icon">🥉</div>
+          <div class="prestasi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="7"/><path d="M9 3h6l1 4H8L9 3z"/><path d="M9 14h6"/></svg></div>
           <div class="prestasi-year">2023</div>
           <div class="prestasi-title">JUARA 3 SLALOM</div>
           <div class="prestasi-event">Borneo Cup Inline Skating Championship — Balikpapan</div>
         </div>
         <div class="prestasi-card">
-          <div class="prestasi-icon">🏆</div>
+          <div class="prestasi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
           <div class="prestasi-year">2022</div>
           <div class="prestasi-title">BEST CLUB AWARD</div>
           <div class="prestasi-event">Pengprov PRSI Kalimantan Barat — Club Terbaik & Teraktif</div>
         </div>
         <div class="prestasi-card">
-          <div class="prestasi-icon">🥇</div>
+          <div class="prestasi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="7"/><path d="M9 3h6l1 4H8L9 3z"/><path d="M12 10v8"/><path d="M9.5 12.5l2.5-2.5 2.5 2.5"/></svg></div>
           <div class="prestasi-year">2022</div>
           <div class="prestasi-title">JUARA 1 SPEED TEAM</div>
           <div class="prestasi-event">Kejurda Sepatu Roda Kalbar — Nomor Estafet Beregu Putra</div>
         </div>
         <div class="prestasi-card">
-          <div class="prestasi-icon">🎖️</div>
+          <div class="prestasi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
           <div class="prestasi-year">2021</div>
           <div class="prestasi-title">WAKIL KALBAR</div>
-          <div class="prestasi-event">Pekan Olahraga Nasional (PON) XX Papua — 3 Atlet BIS</div>
+          <div class="prestasi-event">Pekan Olahraga Nasional (PON) XX Papua — 3 Atlet ROTASI</div>
         </div>
         <div class="prestasi-card">
-          <div class="prestasi-icon">🥈</div>
+          <div class="prestasi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="7"/><path d="M9 3h6l1 4H8L9 3z"/><path d="M12 11v6"/></svg></div>
           <div class="prestasi-year">2020</div>
           <div class="prestasi-title">JUARA 2 OVERALL</div>
           <div class="prestasi-event">Kejurnas Sepatu Roda Junior — Bandung, Jawa Barat</div>
@@ -580,18 +706,18 @@
 </section>
 
 <!-- TESTIMONI -->
-<section class="section" id="testimoni">
+<section class="section section-alt" id="testimoni">
   <div class="section-num top-left">06</div>
   <div class="container">
     <div class="testi-inner">
       <div style="text-align:center;position:relative;z-index:1;">
         <div class="section-label" style="justify-content:center;">Testimoni</div>
-        <h2 class="section-title">KATA MEREKA<br>TENTANG BIS</h2>
+        <h2 class="section-title">KATA MEREKA<br>TENTANG ROTASI</h2>
       </div>
       <div class="testi-grid">
         <div class="testi-card">
           <div class="testi-stars">★★★★★</div>
-          <p class="testi-text">"Anak saya bergabung dari usia 6 tahun, sekarang sudah juara daerah. Pelatihnya sabar dan metode latihannya sangat terstruktur. BIS bukan cuma club olahraga, tapi keluarga kedua untuk anak kami."</p>
+          <p class="testi-text">"Anak saya bergabung dari usia 6 tahun, sekarang sudah juara daerah. Pelatihnya sabar dan metode latihannya sangat terstruktur. ROTASI bukan cuma club olahraga, tapi keluarga kedua untuk anak kami."</p>
           <div class="testi-author">
             <div class="testi-ava">
               <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" alt="Ibu Rini">
@@ -604,7 +730,7 @@
         </div>
         <div class="testi-card">
           <div class="testi-stars">★★★★★</div>
-          <p class="testi-text">"Bergabung BIS adalah keputusan terbaik saya. Dalam 1 tahun saya sudah bisa ikut kompetisi pertama dan meraih medali perunggu. Komunitas di sini saling support dan tidak pelit ilmu."</p>
+          <p class="testi-text">"Bergabung ROTASI adalah keputusan terbaik saya. Dalam 1 tahun saya sudah bisa ikut kompetisi pertama dan meraih medali perunggu. Komunitas di sini saling support dan tidak pelit ilmu."</p>
           <div class="testi-author">
             <div class="testi-ava">
               <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Danu">
@@ -617,7 +743,7 @@
         </div>
         <div class="testi-card">
           <div class="testi-stars">★★★★★</div>
-          <p class="testi-text">"Awalnya cuma iseng ikut kelas pemula, sekarang sudah 3 tahun dan tidak bisa berhenti. BIS mengajarkan saya bukan hanya skate, tapi disiplin, kerja keras, dan arti tim yang sesungguhnya."</p>
+          <p class="testi-text">"Awalnya cuma iseng ikut kelas pemula, sekarang sudah 3 tahun dan tidak bisa berhenti. ROTASI mengajarkan saya bukan hanya skate, tapi disiplin, kerja keras, dan arti tim yang sesungguhnya."</p>
           <div class="testi-author">
             <div class="testi-ava">
               <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=80" alt="Mega">
@@ -634,20 +760,20 @@
 </section>
 
 <!-- KONTAK -->
-<section class="section section-dark" id="kontak">
+<section class="section" id="kontak">
   <div class="section-num top-right">07</div>
   <div class="container">
     <div class="kontak-inner">
       <div>
         <div class="section-label">Kontak & Pendaftaran</div>
-        <h2 class="section-title" style="color:white;">SIAP BERGABUNG<br>BERSAMA KAMI?</h2>
+        <h2 class="section-title">SIAP BERGABUNG<br>BERSAMA KAMI?</h2>
         <p class="section-sub">Hubungi kami untuk informasi pendaftaran, jadwal trial gratis, atau pertanyaan seputar program latihan. Kami siap membantu!</p>
         <div class="kontak-info">
           <div class="kontak-item">
             <div class="kontak-icon">📍</div>
             <div>
               <div class="kontak-label">Lokasi Latihan</div>
-              <div class="kontak-val">GOR Pangsuma, Pontianak<br><span style="font-size:12px;color:rgba(255,255,255,0.4);">Kalimantan Barat</span></div>
+              <div class="kontak-val">GOR Pangsuma, Pontianak<br><span style="font-size:12px;color:var(--gray);">Kalimantan Barat</span></div>
             </div>
           </div>
           <div class="kontak-item">
@@ -661,7 +787,7 @@
             <div class="kontak-icon">📸</div>
             <div>
               <div class="kontak-label">Instagram</div>
-              <div class="kontak-val"><a href="https://instagram.com/borneoinlineskate">@borneoinlineskate</a></div>
+              <div class="kontak-val"><a href="https://instagram.com/rotasi.skate">@rotasi.skate</a></div>
             </div>
           </div>
           <div class="kontak-item">
@@ -691,7 +817,7 @@
           </div>
           <div class="form-group">
             <label>Tertarik Program</label>
-            <select style="color:rgba(255,255,255,0.7);">
+            <select>
               <option value="">Pilih program...</option>
               <option>Kelas Pemula</option>
               <option>Kelas Menengah</option>
@@ -703,7 +829,7 @@
             <label>Pesan / Pertanyaan</label>
             <textarea placeholder="Tulis pertanyaan atau pesan kamu di sini..."></textarea>
           </div>
-          <button type="submit" class="btn-red" style="border:none;cursor:pointer;font-family:'Inter',sans-serif;" id="submitBtn">
+          <button type="submit" class="btn-green" style="border:none;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;justify-content:center;" id="submitBtn">
             Kirim Pesan →
           </button>
         </form>
@@ -718,12 +844,11 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="footer-logo">
-          <div class="footer-logo-icon">BIS</div>
-          <div class="footer-logo-text">Borneo Incline Skate</div>
+          <img src="https://i.ibb.co/zTVKJH40/LOGO-ROTASI-WHITE.webp" alt="ROTASI">
         </div>
         <p class="footer-desc">Club sepatu roda terdepan di Pontianak, Kalimantan Barat. Berlatih, Berprestasi, Bersatu.</p>
         <div class="footer-socials">
-          <a href="https://instagram.com/borneoinlineskate" class="footer-social" aria-label="Instagram">
+          <a href="https://instagram.com/rotasi.skate" class="footer-social" aria-label="Instagram">
             <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
           <a href="https://wa.me/6281200000000" class="footer-social" aria-label="WhatsApp">
@@ -764,31 +889,24 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 <b>Borneo Incline Skate</b>. Seluruh hak cipta dilindungi.</span>
+      <span>© 2026 <b>ROTASI</b>. Seluruh hak cipta dilindungi.</span>
       <span>Pontianak, Kalimantan Barat — Indonesia 🇮🇩</span>
     </div>
   </div>
 </footer>
 
 <script>
-  // Scroll progress
   window.addEventListener('scroll', () => {
     const bar = document.getElementById('scrollBar');
     const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
     bar.style.width = pct + '%';
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 80);
   });
 
-  // Nav sticky
-  const nav = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 80);
-  });
-
-  // Form submit
   function handleSubmit(e) {
     e.preventDefault();
     const btn = document.getElementById('submitBtn');
-    btn.textContent = '✓ Pesan Terkirim! Kami akan segera menghubungi kamu.';
+    btn.textContent = '✓ Pesan Terkirim!';
     btn.style.background = '#22c55e';
     btn.disabled = true;
     setTimeout(() => {
